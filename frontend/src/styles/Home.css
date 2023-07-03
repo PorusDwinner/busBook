@@ -1,0 +1,7 @@
+#mainHomeContainer{
+    height: 100vh;
+    background-image: url("../../public/Images/main.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

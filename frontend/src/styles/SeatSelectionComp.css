@@ -1,0 +1,24 @@
+
+    .selected{
+        background-color: rgb(100, 125, 224);
+        /* margin: 3.2%; */
+        height: 25px;
+        width: 60px;
+        /* padding: 15px; */
+        margin-bottom: 3px;
+        cursor: pointer;
+        box-shadow: 1.1px 1.1px #888888;
+    }
+    
+    .notSelected{
+        background-color: rgb(255, 255, 255);
+        margin-right: 70px;
+        height: 25px;
+        width: 60px;
+        /* padding: 15px; */
+        margin-bottom: 3px;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 1px solid black;
+    }
+
