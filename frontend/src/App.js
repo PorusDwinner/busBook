@@ -23,7 +23,7 @@ function App() {
       dispatch(setBusData(data));
     };
     fetchData();
-  },[]);
+  },[dispatch]);
 
   return (
     <BrowserRouter>
