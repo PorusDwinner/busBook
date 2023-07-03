@@ -1,0 +1,22 @@
+{
+    "name": "busbook_backend",
+    "version": "1.0.0",
+    "description": "busbook_backend_code",
+    "main": "server.js",
+    "scripts": {
+      "build": "npm i",
+      "start": "node ./src/server.js",
+      "dev": "nodemon ./src/server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "dotenv": "^16.1.4",
+      "express": "^4.18.2",
+      "nodemon": "^2.0.22"
+    }
+  }
+  
