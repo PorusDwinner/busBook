@@ -24,7 +24,7 @@ const Login = () => {
   const handelSubmit = async(e) => {
       e.preventDefault();
       setShowSpinner(true);
-        const isVerified = await fetch(`http://localhost:4000/api/check/${loginData.userName}/${loginData.password}`);
+        const isVerified = await fetch(`https://busbook-backend.onrender.com/api/check/${loginData.userName}/${loginData.password}`);
         const response = await isVerified.json();
         console.log('response from the server :', response);
         if(response === 'verified'){

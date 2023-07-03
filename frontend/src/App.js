@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async() => {
-      const result = await fetch(`http://localhost:4000/api/bus-data`)
+      const result = await fetch(`https://busbook-backend.onrender.com/api/bus-data`)
       const data = await result.json();
       dispatch(setBusData(data));
     };

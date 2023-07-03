@@ -26,7 +26,7 @@ const Signup = () => {
     const handelSubmit = async (e) => {
         e.preventDefault();
         setShowSpinner(true);
-        const result = await fetch(`http://localhost:4000/api/add-user/${signupData.userName}/${signupData.email}/${signupData.password}/${signupData.mobile}`)
+        const result = await fetch(`https://busbook-backend.onrender.com/api/add-user/${signupData.userName}/${signupData.email}/${signupData.password}/${signupData.mobile}`)
         const response = await result.json();
         if (response === `${signupData.userName} added`) {
             dispatch(setLoginState());
