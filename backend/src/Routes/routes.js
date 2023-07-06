@@ -56,7 +56,7 @@ router.get('/api/all-tickets/:userName') , (req ,res) => {
     console.log('all tickets finder api triggered')
     let tickets;
     withDB( async(db) => {
-        tickets = await db.collection('BOOKING').find({Account : req.params['userName']}).toArray();
+        tickets = await db.collection('BOOKING').find({account : req.params['userName']}).toArray();
     })
     .then(() => res.json(tickets))
     .catch((err) => console.log('Failed To send tickets data',err));
