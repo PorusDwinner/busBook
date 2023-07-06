@@ -41,7 +41,7 @@ const Login = () => {
       <div className='p-8'>
 
           <div className="text-2xl text-center font-bold m-6 text-slate-700 font-mono">
-            <h1>Already user ?</h1>
+            <h1>Already a user ?</h1>
           </div>
 
           <form onSubmit={handelSubmit} className="flex flex-col space-y-8">

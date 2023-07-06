@@ -17,7 +17,7 @@ const Topbar = () => {
           </li>
           
           <li>
-            <h3 className='font-bold text-slate-700 sm:text-lg'>Reserve</h3>
+            <h3 className='font-bold text-slate-700 sm:text-lg'>busbook.in</h3>
           </li>
           
           <li className='text-slate-600 text-sm font-medium'>

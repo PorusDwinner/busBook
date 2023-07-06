@@ -118,7 +118,7 @@ const SeatSelectionComp = ({ bus }) => {
                                       lowerBirthSeats?.map((seat, index) => (
                                           <div className={(seat.selected ? "selected" : "notSelected")} key={seat.seatNumber}
                                               onClick={() => handleSeatClick(seat.seatNumber, index)}>
-                                                <div className=' h-[23px] border-r-[20px] border-slate-200 p-1'></div>
+                                                <div className=' h-[23px] border-r-[20px] border-slate-200 p-1 text-[12px]'>{seat.seatNumber}</div>
                                           </div>
                                       ))
                                   }
@@ -135,6 +135,7 @@ const SeatSelectionComp = ({ bus }) => {
                                       upperBitrthSeats.map((seat, index) => (
                                           <div className={(seat.selected ? " selected" : "notSelected")}
                                               key={seat.seatNumber} onClick={() => handleSeatClick2(seat.seatNumber, index)}>
+                                                <div className='h-[23px] border-r-[20px] border-slate-200 text-[12px] p-1'>{seat.seatNumber}</div>
                                           </div>
                                       ))}
                               </div>
