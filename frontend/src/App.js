@@ -5,6 +5,7 @@ import DetailsFile from "./page/DetailsFile";
 import Payment from "./page/Payment";
 import LoginSignup from "./page/LoginSignup"
 import Home from "./page/Home";
+import Ticket from "./page/Ticket";
 import BookingConfirm from "./page/BookingConfirm";
 import { useSelector } from "react-redux";
 import { useEffect } from 'react';
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/available-buses" element={<AvailableBuses/>}/>
+          <Route exact path="/tickets" element={<Ticket/>}/>
           <Route exact path="/details-filing" element={ loginState ? <DetailsFile/> : <LoginSignup/> }/>
           <Route exact path="/payment" element={<Payment/>}/>
           <Route exact path="/booking-confirm" element={<BookingConfirm/>}/>

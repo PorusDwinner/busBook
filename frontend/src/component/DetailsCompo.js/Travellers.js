@@ -16,7 +16,7 @@ const Travellers = ({ bookedSeats }) => {
     dispatch(setFinalBookingDetails(values));
     let arr = values.userForm
     action.resetForm();
-    fetch('http://localhost:4000/api/booking-details', {
+    fetch('https://busbook-backend.onrender.com/api/booking-details', {
       method : 'POST',
       headers : {
         'Content-Type': 'application/json'
@@ -38,7 +38,8 @@ const Travellers = ({ bookedSeats }) => {
                                   age: '',
                                   email: '',
                                   mobile: '',
-                                  seat : user.seat }
+                                  seat : user.seat,
+                                  date : new Date(), }
                 ))
               }}
               onSubmit={handelSubmit} >

@@ -52,6 +52,16 @@ router.get('/api/add-user/:userName/:email/:password/:mobile', (req , res) => {
     })
 });
 
+router.get('/api/all-tickets/:userName') , (req ,res) => {
+    console.log('all tickets finder api triggered')
+    let tickets;
+    withDB( async(db) => {
+        tickets = await db.collection('BOOKING').find({Account : req.params['userName']}).toArray();
+    })
+    .then(() => res.json(tickets))
+    .catch((err) => console.log('Failed To send tickets data',err));
+}
+
 module.exports = router;
 
 // FIND ALL BOOKED DETAILS OF THE USER

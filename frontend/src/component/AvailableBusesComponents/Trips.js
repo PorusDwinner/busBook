@@ -7,7 +7,6 @@ const Trips = () => {
     const dispatch = useDispatch();
 
     const availableBus = useSelector((state) => state.availableBuses);
-    console.log('available buses in trips : ',availableBus);
     const selectedBus = useSelector((state) => state.selectedBus);
 
     const handleSelectedBus = (bus) => {
