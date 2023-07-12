@@ -1,4 +1,5 @@
 import Trips from "../component/AvailableBusesComponents/Trips";
+import '../styles/AvailableBuses.css';
 
 const AvailableBuses = () => {
 
@@ -95,8 +96,8 @@ const AvailableBuses = () => {
   // };
 
   return (
-    <div className='flex m-2 '>
-      <div className="flex flex-col mr-1 sm:w-[30%] lg:w-[20%]">
+    <div className='flex m-2'>
+      <div id='mainFilterDiv' className="flex flex-col mr-1 sm:w-[30%] lg:w-[20%]">
             <div className="flex justify-between gap-5 p-2.5 border-2 border-solid border-[rgb(169,169,169)]">
               <h4>Filter</h4>
               <h4>Clear All</h4>

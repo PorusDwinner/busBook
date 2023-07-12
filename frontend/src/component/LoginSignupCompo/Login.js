@@ -37,8 +37,8 @@ const Login = () => {
   };
 
   return (
-    <div className='bg-slate-100 h-screen flex justify-center items-center'>
-      <div className='p-8'>
+    <div className='bg-slate-100 flex justify-center items-center'>
+      <div className=''>
 
           <div className="text-2xl text-center font-bold m-6 text-slate-700 font-mono">
             <h1>Already a user ?</h1>

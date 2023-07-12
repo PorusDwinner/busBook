@@ -38,8 +38,8 @@ const Signup = () => {
     };
 
     return (
-        <div className='bg-slate-100-50 h-screen flex justify-center items-center'>
-            <div className='p-8'>
+        <div className='bg-slate-100/50 flex justify-center items-center'>
+            <div className=''>
 
                 <div className="text-2xl text-center font-bold m-6 text-slate-700 font-mono">
                     <h1>Sign up</h1>
@@ -58,7 +58,7 @@ const Signup = () => {
                     <input className=" p-2 rounded-sm" placeholder="Enter mobile..."
                         type='text' size={40} name='mobile' value={signupData.mobile} onChange={handelChange} />
 
-                    <button type="submit" className="bg-blue-600 text-slate-200 font-mono text-xl px-6 py-1 rounded-md
+                    <button type="submit" className="bg-blue-600 text-slate-200 font-mono text-xl px-6 py-1 rounded-md mb-4
                     hover:bg-blue-500">
                         Register
                     </button>

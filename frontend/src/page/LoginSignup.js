@@ -1,16 +1,16 @@
-import '../styles/LoginSignup.css';
+import '../styles/LoginSignup.css'
 import Login from '../component/LoginSignupCompo/Login';
 import Signup from '../component/LoginSignupCompo/Signup';
 
 const LoginSignup = () => {
 
   return (
-    <div id='mainLoginSignupDiv' className='flex justify-center items-center space-x-16 h-screen bg-slate-100/50'>
-        <div>
+    <div className='flex justify-center items-center space-x-16 h-screen bg-slate-100/50' id='mainLoginSignupDiv'>
+        <div id='loginCompo'>
             <Login/>
         </div>
 
-        <div>
+        <div id='signupComp'>
             <Signup/>
         </div>
     </div>
