@@ -6,7 +6,7 @@ import { setLoginState } from "../../slicer/slicer";
 const Login = () => {
 
   const dispatch = useDispatch();
-  const [showSpinner , setShowSpinner] = useState(false);
+  let [showSpinner , setShowSpinner] = useState(false);
   const [loginData, setLonginData] = useState({
     userName: '',
     password: '',
@@ -30,6 +30,8 @@ const Login = () => {
         if(response === 'verified'){
           dispatch(setLoginState())
           dispatch(setUserName(`${loginData.userName}`))
+          setShowSpinner(false);
+          alert('Login Succesfully')
         } else{
           alert('Wrong Credientials or Server not responding');
           setShowSpinner(false);

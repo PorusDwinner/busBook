@@ -52,21 +52,27 @@ router.get('/api/add-user/:userName/:email/:password/:mobile', (req , res) => {
     })
 });
 
-router.get('/api/all-tickets/:userName') , (req ,res) => {
-    console.log('all tickets finder api triggered')
-    let tickets;
+// ALL TICKETS DETAILS OF THE USER
+
+router.get('/api/tickets/:username' , (req ,res) => {
+    console.log('username recieved through param :',req.params['username']);
+    let allTickets;
     withDB( async(db) => {
-        tickets = await db.collection('BOOKING').find({account : req.params['userName']}).toArray();
+        allTickets = await db.collection('BOOKINGS')
+        .find({ account : req.params['username'] })
+        .toArray();
+        
+        res.json(allTickets);
     })
-    .then(() => res.json(tickets))
-    .catch((err) => console.log('Failed To send tickets data',err));
-}
+    .then(() => console.log('All tickets sent'))
+    .catch((err) => console.log('failed to sent',err));
+});
 
 module.exports = router;
 
-// FIND ALL BOOKED DETAILS OF THE USER
-router.get('/api/find-tickets/:username', (req ,res) => {
-    withDB( async(db) => {
-        await db.collection('BOOKINGS').find({name : req.params['username']})
-    })
-});
+// // FIND ALL BOOKED DETAILS OF THE USER
+// router.get('/api/find-tickets/:username', (req ,res) => {
+//     withDB( async(db) => {
+//         await db.collection('BOOKINGS').find({name : req.params['username']})
+//     })
+// });

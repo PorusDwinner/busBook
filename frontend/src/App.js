@@ -36,6 +36,7 @@ function App() {
           <Route exact path="/details-filing" element={ loginState ? <DetailsFile/> : <LoginSignup/> }/>
           <Route exact path="/payment" element={<Payment/>}/>
           <Route exact path="/booking-confirm" element={<BookingConfirm/>}/>
+          <Route exact path="/login-signup" element={<LoginSignup/>}/>
         </Routes> 
     </BrowserRouter>
   );

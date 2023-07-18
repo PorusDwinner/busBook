@@ -6,16 +6,17 @@ const Ticket = () => {
   const loginState = useSelector((state) => state.loginState);
   const userName = useSelector((state) => state.userName);
   const [tickets , setTickets] = useState([]);  
-
+//https://busbook-backend.onrender.com
   useEffect(() => {
     const fetchTickets = async() => {
-        const result = await fetch(`https://busbook-backend.onrender.com/api/all-tickets/${userName}`);
+        const result = await fetch(`http://localhost:4000/api/tickets/${userName}`);
         const data = await result.json();
         setTickets(data);
-        console.log('Tickets :', tickets);
     };
     fetchTickets();
-  },[tickets]);
+  },[]);
+
+  console.log('Tickets :', tickets);
     
   return (
     <div>

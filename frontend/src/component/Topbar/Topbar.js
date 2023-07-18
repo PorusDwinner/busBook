@@ -33,6 +33,10 @@ const Topbar = () => {
           <li className='text-slate-600 text-sm font-medium mr-4'>
             <Link to='/'>Home</Link>
           </li>
+
+          <li className='text-slate-600 text-sm font-medium mr-4'>
+            <Link to='/login-signup'>Login</Link>
+          </li>
           
           { loginState ? 
             <li className='bg-orange-500 px-6 py-1 text-slate-200 rounded-sm shadow mr-4
