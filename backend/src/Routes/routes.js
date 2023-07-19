@@ -70,6 +70,13 @@ router.get('/api/tickets/:username' , (req ,res) => {
 
 module.exports = router;
 
+// FILTER APIs
+
+router.post('/api/filter', (req ,res) => {
+    console.log(req.body);
+    res.json({msg : 'response from server is working'})
+});
+
 // // FIND ALL BOOKED DETAILS OF THE USER
 // router.get('/api/find-tickets/:username', (req ,res) => {
 //     withDB( async(db) => {
